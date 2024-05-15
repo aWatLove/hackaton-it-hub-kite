@@ -1,0 +1,46 @@
+.menuCentered {
+
+}
+
+.hideScroll {
+    overflow: hidden !important;
+    position: relative;
+
+    & > div > div:first-child {
+        width: 100% !important;
+    }
+}
+
+.carousel {
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    touch-action: pan-x;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+
+.tagsFilterChip {
+    display: flex !important;
+    /*height: 86px;*/
+    align-items: center;
+    border-radius: 100px !important;
+}
+.objectChip {
+    background-color: transparent;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+    border-radius: 100px !important;
+    margin-bottom: 16px;
+}
+.hideScroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}

@@ -1,0 +1,216 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "globals": {
+    "React": true,
+    "JSX": true,
+    "NodeJS": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js"
+      ],
+      "env": {
+        "jest": true
+      }
+    },
+    {
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "rules": {
+        "no-redeclare": "off"
+      }
+    }
+  ],
+  "settings": {
+    "localeFiles": [
+      "i18n/ru.json",
+      "i18n/en.json"
+    ],
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    },
+    "boundaries/include": [
+      "src/**/*",
+      "../fsd/**/*"
+    ],
+    "boundaries/elements": [
+      {
+        "type": "app",
+        "pattern": "fsd/app"
+      },
+      {
+        "type": "pages",
+        "pattern": "fsd/pages/*",
+        "capture": [
+          "page"
+        ]
+      },
+      {
+        "type": "widgets",
+        "pattern": "fsd/widgets/*",
+        "capture": [
+          "widget"
+        ]
+      },
+      {
+        "type": "features",
+        "pattern": "fsd/features/*",
+        "capture": [
+          "feature"
+        ]
+      },
+      {
+        "type": "entities",
+        "pattern": "fsd/entities/*",
+        "capture": [
+          "entity"
+        ]
+      },
+      {
+        "type": "shared",
+        "pattern": "fsd/shared/*",
+        "capture": [
+          "segment"
+        ]
+      }
+    ]
+  },
+  "plugins": [
+    "jest",
+    "react",
+    "prettier",
+    "@typescript-eslint",
+    "formatjs",
+    "boundaries"
+  ],
+  "rules": {
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "zones": [
+          {
+            "target": "./fsd",
+            "from": "./src",
+            "except": [
+              "../fsd"
+            ]
+          }
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "import/no-named-as-default": "off",
+    "no-plusplus": "off",
+    "import/no-cycle": "warn",
+    // todo set error
+    "arrow-body-style": "warn",
+    "no-extend-native": "off",
+    "no-underscore-dangle": "off",
+    "global-require": "off",
+    "prefer-const": "off",
+    "no-restricted-globals": "off",
+    "no-else-return": "off",
+    "no-shadow": "off",
+    "import/order": "off",
+    "react/jsx-curly-brace-presence": "off",
+    "no-lonely-if": "off",
+    "no-empty": "warn",
+    "react/no-unescaped-entities": "off",
+    "no-alert": "off",
+    "react/default-props-match-prop-types": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "no-restricted-syntax": "off",
+    "no-unused-vars": "off",
+    "prefer-template": "warn",
+    "no-useless-escape": "warn",
+    "class-methods-use-this": "off",
+    "no-var": "off",
+    "vars-on-top": "off",
+    "func-names": "off",
+    "no-bitwise": "off",
+    "eqeqeq": "warn",
+    "no-continue": "off",
+    "react/button-has-type": "off",
+    "one-var": "off",
+    "import/no-named-as-default-member": "off",
+    "no-global-assign": "off",
+    "no-undef": "off",
+    "no-await-in-loop": "off",
+    "prefer-destructuring": "warn",
+    "import/no-useless-path-segments": "off",
+    "spaced-comment": "off",
+    "import/prefer-default-export": "off",
+    "object-curly-newline": 0,
+    "import/no-unresolved": "off",
+    "import/export": "warn",
+    "no-irregular-whitespace": "off",
+    "consistent-return": "off",
+    "react/no-danger": "off",
+    "react/forbid-prop-types": "off",
+    "no-use-before-define": "off",
+    "no-nested-ternary": "off",
+    "jsx-a11y/role-supports-aria-props": "off",
+    "jsx-a11y/img-redundant-alt": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/function-component-definition": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": "off",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unused-prop-types": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/no-unknown-property": "off",
+    //        "react/no-find-dom-node": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@next/next/no-img-element": "off",
+    "@next/next/no-page-custom-font": "off",
+    "@next/next/google-font-display": "off",
+    "@next/next/next-script-for-ga": "off"
+  }
+}

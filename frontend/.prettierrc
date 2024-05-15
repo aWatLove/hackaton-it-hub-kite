@@ -1,0 +1,24 @@
+{
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "useTabs": false,
+    "printWidth": 160,
+    "quoteProps": "as-needed",
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "^@/(.*)$",
+        "^@/Component/(.*)$",
+        "^@core/(.*)$",
+        "^@icons/(.*)$",
+        "^@Page/(.*)$",
+        "^hooks",
+        "^lib",
+        "^./(.*)",
+        "^../(.*)",
+        "(.css)$"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "endOfLine": "crlf"
+}
